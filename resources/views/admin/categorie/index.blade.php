@@ -69,12 +69,12 @@ setTimeout(function() {
             </tr>
         </thead>
         <tbody>
-            @if($categories->isEmpty())
+            @if($categoriespages->isEmpty())
                 <tr>
                     <td colspan="5" class="text-center">Aucune catégorie disponible</td>
                 </tr>
             @else
-                @foreach($categories as $categorie)
+                @foreach($categoriespages as $categorie)
                 <tr>
                     <th scope="row">{{ $categorie->id }}</th>
                     <td>{{ $categorie->name }}</td>
