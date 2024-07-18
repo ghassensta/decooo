@@ -516,7 +516,7 @@
                     <p class="category-item-amount">({{ $categorie->products()->count() }})</p>
                   </div>
 
-                  <a href="#" class="category-btn">Voir Tout</a>
+                  <a href="{{ route('categories.show',$categorie->id) }}" class="category-btn">Voir Tout</a>
 
                 </div>
 

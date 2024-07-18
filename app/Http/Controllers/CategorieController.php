@@ -44,12 +44,21 @@ class CategorieController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+    public function show($id)
+    {
+        $categories = Categorie::find($id);
+       // dd($categories);
+        return view('admin.categorie.show', ["categories" => $categories]);
+    }
+
+
     public function edit($id)
     {
         $categorie = Categorie::findOrFail($id);
         return view('admin.categorie.edit', compact('categorie'));
     }
-
+    
+ 
     /**
      * Update the specified resource in storage.
      */
