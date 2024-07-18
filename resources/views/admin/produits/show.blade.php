@@ -297,7 +297,7 @@
                 @foreach ($produitsMemeCategorie as $item)
                     <div class="showcase">
                         <div class="showcase-banner">
-                            <a href="{{ route('produits.show',$produit->id) }}" style="cursor: pointer">
+                            <a href="{{ route('produits.show',$item->id) }}" style="cursor: pointer">
                             @if ($item->image   ->isNotEmpty())
                                 <img src="{{ asset('images/' . $item->image->first()->path) }}"
                                     alt="{{ Str::limit($item->name, 10) }}" class="product-img default"
@@ -326,8 +326,8 @@
                         </div>
 
                         <div class="showcase-content">
-                            <a href="{{ route('produits.show',$produit->id) }}" class="showcase-category">{{ Str::limit($item->name, 30) }}</a>
-                            <a href="{{ route('produits.show',$produit->id) }}">
+                            <a href="{{ route('produits.show',$item->id) }}" class="showcase-category">{{ Str::limit($item->name, 30) }}</a>
+                            <a href="{{ route('produits.show',$item->id) }}">
                                 <h3 class="showcase-title">{{ Str::limit($item->description, 20) }}</h3>
                             </a>
                             <div class="showcase-rating">
